@@ -1,0 +1,121 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #ffffff;
+    color: #333333;
+    line-height: 1.6;
+}
+
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    padding: 0;
+}
+
+.landing-card {
+    background-color: #ffffff;
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+    display: flex;
+    width: 90vw;
+    max-width: 1800px;
+    overflow: hidden;
+}
+
+.landing-content {
+    flex: 1.0;
+    padding: 40px 60px 40px 120px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    text-align: left;
+}
+
+.landing-content h1 {
+    font-size: 4.5rem;
+    color: #e76f8f;
+    margin-bottom: 20px;
+}
+
+.landing-content p {
+    font-size: 1.75rem;
+    color: #444444;
+    margin-bottom: 40px;
+}
+
+.landing-content .btn-login {
+    display: inline-block;
+    background-color: #e76f8f;
+    color: #ffffff;
+    text-decoration: none;
+    font-size: 1.5rem;
+    padding: 12px 25px;
+    border-radius: 4px;
+    transition: background-color 0.3s ease;
+    width: auto;
+}
+
+.landing-content .btn-login:hover {
+    background-color: #d65e7a;
+}
+
+.landing-image {
+    flex: 1.2;
+    background: url('../images/landing_image.jpg') center center no-repeat;
+    background-size: 100% 100%;
+    background-color: #ffffff;
+}
+
+@media (max-width: 1200px) {
+    .landing-card {
+        width: 95vw;
+    }
+    .landing-content {
+        padding: 30px 40px 30px 80px;
+    }
+    .landing-content h1 {
+        font-size: 3.5rem;
+    }
+    .landing-content p {
+        font-size: 1.5rem;
+    }
+    .landing-content .btn-login {
+        font-size: 1.3rem;
+        padding: 14px 30px;
+    }
+    .landing-image {
+        background-size: contain;
+    }
+}
+
+@media (max-width: 1024px) {
+    .landing-card {
+        flex-direction: column;
+        width: 90vw;
+    }
+    .landing-image {
+        height: 350px;
+        background-size: contain;
+    }
+    .landing-content {
+        padding: 30px 20px 30px 40px;
+    }
+    .landing-content h1 {
+        font-size: 3rem;
+    }
+    .landing-content p {
+        font-size: 1.25rem;
+    }
+    .landing-content .btn-login {
+        font-size: 1.1rem;
+        padding: 12px 25px;
+    }
+}

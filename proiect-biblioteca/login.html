@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="ro">
+<head>
+  <meta charset="UTF-8">
+  <title>Login - Biblioteca</title>
+  <link rel="stylesheet" href="css/login.css">
+  <style>
+    /* Stil pentru mesajul de eroare */
+    .error-message {
+      color: #e74c3c;
+      background-color: #fdecea;
+      border: 1px solid #e74c3c;
+      padding: 10px;
+      border-radius: 4px;
+      margin-top: 15px;
+      text-align: center;
+    }
+  </style>
+</head>
+<body>
+  <div class="login-container">
+    <h1>Login</h1>
+    <form action="backend/login.php" method="POST">
+      <label for="email">Email:</label>
+      <input type="email" name="email" required>
+
+      <label for="parola">Parolă:</label>
+      <input type="password" name="parola" required>
+
+      <button type="submit">Autentifică-te</button>
+    </form>
+
+    
+    <div id="error-message" class="error-message" style="display: none;"></div>
+
+    <p class="register-link">
+      Nu ai cont? <a href="register.html">Înregistrează-te</a>
+    </p>
+  </div>
+
+  <script>
+    
+    const params = new URLSearchParams(window.location.search);
+    if (params.has('error')) {
+      const errorParam = params.get('error');
+
+      
+      let mesaj = '';
+      if (errorParam === 'invalid_credentials') {
+        mesaj = 'Email sau parolă incorectă.';
+      } else {
+        
+        mesaj = decodeURIComponent(errorParam);
+      }
+
+      const errorDiv = document.getElementById('error-message');
+      errorDiv.textContent = mesaj;
+      errorDiv.style.display = 'block';
+    }
+  </script>
+</body>
+</html>

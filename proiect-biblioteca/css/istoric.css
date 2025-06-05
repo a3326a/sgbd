@@ -1,0 +1,153 @@
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+
+body {
+  font-family: Arial, sans-serif;
+  background-color: #fafafa;
+  color: #333;
+  line-height: 1.4;
+  padding-bottom: 2rem; /* spațiu la bază */
+}
+
+
+header {
+  background-color: #f89dbf;   /* un roz intens */
+  color: #fff;
+  padding: 1rem 2rem;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+}
+
+
+header h2 {
+  font-size: 1.8rem;
+  font-weight: normal;
+}
+
+
+header nav {
+  
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+}
+
+
+header nav a {
+  color: #ffebf5;            
+  text-decoration: none;
+  margin-left: 1rem;
+  font-weight: bold;
+  transition: text-decoration 0.2s;
+}
+
+header nav a:hover {
+  text-decoration: underline;
+}
+
+
+@media (max-width: 600px) {
+  header {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  header nav {
+    margin-top: 0.7rem;
+  }
+}
+
+
+main {
+  max-width: 800px;
+  margin: 2rem auto;   
+  padding: 0 1rem;
+}
+
+
+main h3 {
+  font-size: 1.5rem;
+  margin-bottom: 1rem;
+  color: #555;
+}
+
+
+main p {
+  font-size: 1.1rem;
+  color: #777;
+  text-align: center;
+  margin-top: 2rem;
+}
+
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 1rem;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  background-color: #fff;
+}
+
+
+table thead {
+  background-color: #f89dbf;
+  color: #fff;
+}
+
+
+table th,
+table td {
+  padding: 0.75rem 1rem;
+  text-align: left;
+  border-bottom: 1px solid #e0e0e0;
+}
+
+
+table th {
+  font-size: 1rem;
+  letter-spacing: 0.02em;
+}
+
+
+table tbody tr:nth-child(even) {
+  background-color: #f8f8f8;
+}
+
+
+table tbody tr:hover {
+  background-color: #ffe8f2; /* roz foarte pal */
+}
+
+
+table tbody tr td:first-child,
+table thead tr th:first-child {
+  width: 40%;
+}
+
+table tbody tr td:last-child,
+table thead tr th:last-child {
+  width: 60%;
+}
+
+
+table tbody tr td:first-child {
+  font-family: "Courier New", Courier, monospace;
+  font-size: 0.9rem;
+  color: #333;
+}
+
+table tbody tr td:last-child {
+  font-size: 1rem;
+  color: #444;
+}
+
+
+header + main {
+  margin-top: 1rem;
+}

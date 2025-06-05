@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="ro">
+<head>
+  <meta charset="UTF-8">
+  <title>Schimbă Email – Biblioteca</title>
+  <link rel="stylesheet" href="css/schimba.css">
+</head>
+<body>
+  <div class="update-container">
+    <h1>Schimbă Adresa de Email</h1>
+    <form action="backend/update_email.php" method="POST">
+      <!-- Email nou -->
+      <label for="email_nou">Email nou:</label>
+      <input type="email" name="email_nou" id="email_nou" required
+             placeholder="introdu noul email">
+
+      <!-- Parolă curentă (verificare) -->
+      <label for="parola_curenta">Parola curentă:</label>
+      <input type="password" name="parola_curenta" id="parola_curenta" required
+             placeholder="introdu parola ta actuală">
+
+      <button type="submit">Salvează email</button>
+    </form>
+
+    <p class="back-link">
+      <a href="user_dashboard.php">‹ Înapoi la Dashboard</a>
+    </p>
+  </div>
+</body>
+</html>

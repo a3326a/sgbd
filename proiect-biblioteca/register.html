@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="ro">
+<head>
+  <meta charset="UTF-8">
+  <title>Register – Biblioteca</title>
+  <link rel="stylesheet" href="css/register.css">
+  <style>
+    
+    .inline-error {
+      background-color: #fdecea;
+      border: 1px solid #e74c3c;
+      color: #e74c3c;
+      padding: 12px 16px;
+      border-radius: 6px;
+      margin-top: 15px;
+      text-align: center;
+      font-size: 1rem;
+    }
+  </style>
+</head>
+<body>
+  <div class="register-container">
+    <h1>Înregistrează-te</h1>
+    <form action="backend/register.php" method="POST">
+      <label for="nume">Nume:</label>
+      <input type="text" name="nume" id="nume" required>
+
+      <label for="email">Email:</label>
+      <input type="email" name="email" id="email" required>
+
+      <label for="parola">Parolă:</label>
+      <input type="password" name="parola" id="parola" required>
+
+      <button type="submit">Creează cont</button>
+    </form>
+
+    
+    <div id="register-error" class="inline-error" style="display: none;"></div>
+
+    <p>Ai deja cont? <a href="login.html">Autentifică-te</a></p>
+  </div>
+
+  <script>
+    
+    const params = new URLSearchParams(window.location.search);
+    if (params.has('error')) {
+      const errorParam = params.get('error');
+      let mesaj = '';
+
+      if (errorParam === 'email_used') {
+        mesaj = 'Email-ul este deja folosit de un alt cont.';
+      } else {
+        
+        mesaj = decodeURIComponent(errorParam);
+      }
+
+      const errorDiv = document.getElementById('register-error');
+      errorDiv.textContent = mesaj;
+      errorDiv.style.display = 'block';
+    }
+  </script>
+</body>
+</html>

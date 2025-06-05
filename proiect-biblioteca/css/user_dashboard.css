@@ -1,0 +1,124 @@
+/* css/user_dashboard.css */
+
+body {
+  background-color: #fafafa;
+  font-family: 'Segoe UI', sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+header {
+  background-color: #f89dbf;
+  color: white;
+  padding: 10px 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+header h2 {
+  margin: 0;
+}
+
+header nav a {
+  color: white;
+  text-decoration: none;
+  margin-left: 15px;
+}
+
+main {
+  padding: 20px;
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+h3 {
+  margin-bottom: 10px;
+}
+
+/* Formular de căutare */
+.search-form {
+  display: flex;
+  align-items: center;
+  margin-bottom: 15px;
+}
+
+.search-input {
+  flex: 1;
+  padding: 8px 10px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  font-size: 14px;
+}
+
+.search-button {
+  background-color: #f89dbf;
+  color: white;
+  border: none;
+  padding: 8px 14px;
+  margin-left: 8px;
+  font-size: 14px;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.search-button:hover {
+  background-color: #f2709c;
+}
+
+.clear-link {
+  margin-left: 12px;
+  color: #666;
+  text-decoration: none;
+  font-size: 14px;
+}
+
+.clear-link:hover {
+  text-decoration: underline;
+}
+
+/* Tabelul cu cărți */
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 5px;
+}
+
+table, th, td {
+  border: 1px solid #ddd;
+}
+
+th, td {
+  padding: 8px;
+  text-align: left;
+}
+
+th {
+  background-color: #f2f2f2;
+}
+
+button {
+  background-color: #f89dbf;
+  color: white;
+  border: none;
+  padding: 5px 10px;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 14px;
+}
+
+button:hover {
+  background-color: #f2709c;
+}
+
+.unavailable {
+  color: gray;
+  font-style: italic;
+}
+
+.no-results {
+  text-align: center;
+  padding: 20px;
+  color: #777;
+}
